@@ -29,5 +29,8 @@
     "@pinia/nuxt": "^0.5.1",
     "nuxt-icons": "^3.2.1",
     "pinia": "^2.1.7"
-  }
+  },
+  "browserslist": [
+    "cover 99.5%"
+  ]
 }
