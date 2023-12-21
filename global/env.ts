@@ -13,7 +13,16 @@ export const DEV_ENV = {
 }
 
 // 假设测试环境的域名是 https://xxx-test.com
-const isDev = process.env.NODE_ENV === 'development' || ['xxx-test.com'].includes(location.host)
+let isDev = process.env.NODE_ENV === 'development'
+try {
+	if (!process.server) {
+		isDev = isDev || ['xxx-test.com'].includes(location.host) || false
+	} else {
+		isDev = isDev || process.env.IS_DEV === 'TRUE' || false
+	}
+} catch (err) {
+	console.log('err in env')
+}
 
 export type EnvKey = keyof typeof PROD_ENV
 
