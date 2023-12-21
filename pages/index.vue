@@ -12,5 +12,4 @@ function changeName(): void {
 }
 </script>
 <style lang="scss" scoped>
-@import url(@/assets/css/common.scss);
 </style>
