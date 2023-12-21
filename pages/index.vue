@@ -4,7 +4,7 @@
 	<NuxtIcon name="arrow-right" class="text-[100px]" />
 </template>
 <script lang="ts" setup>
-import { useStore } from '../store/index'
+import { useStore } from '@/store/index'
 
 const store = useStore()
 function changeName(): void {
@@ -12,5 +12,5 @@ function changeName(): void {
 }
 </script>
 <style lang="scss" scoped>
-@import url(../assets/css/common.scss);
+@import url(@/assets/css/common.scss);
 </style>
