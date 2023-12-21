@@ -1,7 +1,7 @@
 <template>
   <div class="box">hello</div>
   <div class="text-[43px] text-[red]" @click="changeName">{{ store.name }}</div>
-  <div></div>
+  <NuxtIcon name="arrow-right" class="text-[100px]"/>
 </template>
 <script lang="ts" setup>
 import { useStore } from '../store/index';
